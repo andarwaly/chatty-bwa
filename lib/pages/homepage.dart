@@ -10,6 +10,17 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: primary100,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(
+          Icons.add,
+          size: 28,
+        ),
+        foregroundColor: neutral0,
+        backgroundColor: secondary100,
+        splashColor: primary100,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: SafeArea(
         child: Center(
           child: Column(
