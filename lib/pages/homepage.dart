@@ -23,54 +23,57 @@ class HomePage extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: SafeArea(
         child: Center(
-          child: Column(
-            children: [
-              const SizedBox(
-                height: 40,
-              ),
-              Image.asset(
-                'assets/images/profile_pic.png',
-                height: 100,
-                width: 100,
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Text(
-                'Sabrina Carpenter',
-                style: username,
-              ),
-              const SizedBox(
-                height: 2,
-              ),
-              Text(
-                'Travel Freelancer',
-                style: userbio,
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              ClipSmoothRect(
-                radius: const SmoothBorderRadius.only(
-                    topLeft: SmoothRadius(
-                      cornerRadius: 30,
-                      cornerSmoothing: 0.6,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            padding: const EdgeInsets.only(bottom: 0),
+            physics: const BouncingScrollPhysics(),
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 40,
+                ),
+                Image.asset(
+                  'assets/images/profile_pic.png',
+                  height: 100,
+                  width: 100,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  'Sabrina Carpenter',
+                  style: username,
+                ),
+                const SizedBox(
+                  height: 2,
+                ),
+                Text(
+                  'Travel Freelancer',
+                  style: userbio,
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                ClipSmoothRect(
+                  radius: const SmoothBorderRadius.only(
+                      topLeft: SmoothRadius(
+                        cornerRadius: 30,
+                        cornerSmoothing: 0.6,
+                      ),
+                      topRight: SmoothRadius(
+                        cornerRadius: 30,
+                        cornerSmoothing: 0.6,
+                      )),
+                  child: Container(
+                    // Container List Chat
+                    color: neutral0,
+                    width: double.infinity,
+                    padding: const EdgeInsets.only(
+                      top: 24,
+                      right: 24,
+                      left: 24,
+                      bottom: 84,
                     ),
-                    topRight: SmoothRadius(
-                      cornerRadius: 30,
-                      cornerSmoothing: 0.6,
-                    )),
-                child: Container(
-                  height: 467,
-                  // Container List Chat
-                  color: neutral0,
-                  width: double.infinity,
-                  padding: const EdgeInsets.only(
-                      top: 24, right: 24, left: 24, bottom: 8),
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.vertical,
-                    padding: const EdgeInsets.only(bottom: 16.0),
-                    physics: const BouncingScrollPhysics(),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -126,12 +129,26 @@ class HomePage extends StatelessWidget {
                           chatTime: '02:11',
                           read: false,
                         ),
+                        const chatReels(
+                          chatImg: 'assets/images/group3.png',
+                          chatFrom: 'Bentley',
+                          chatText: 'The car which does not...',
+                          chatTime: '02:11',
+                          read: false,
+                        ),
+                        const chatReels(
+                          chatImg: 'assets/images/group3.png',
+                          chatFrom: 'Bentley',
+                          chatText: 'The car which does not...',
+                          chatTime: '02:11',
+                          read: false,
+                        ),
                       ],
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

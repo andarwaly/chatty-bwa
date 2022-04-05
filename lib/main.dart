@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pages/homepage.dart';
+import 'pages/messages.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Poppins',
       ),
-      home: HomePage(),
+      home: chatPanel(),
     );
   }
 }

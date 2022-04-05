@@ -57,8 +57,8 @@ TextStyle bodyL = TextStyle(
 
 TextStyle bodyB = TextStyle(
   color: neutral50,
-  fontSize: 16,
-  fontWeight: FontWeight.w400,
+  fontSize: 14,
+  fontWeight: FontWeight.w300,
   height: 1.5,
 );
 
