@@ -1,5 +1,7 @@
 # chatty_bwa
 
+[![wakatime](https://wakatime.com/badge/github/andarwaly/chatty-bwa.svg)](https://wakatime.com/badge/github/andarwaly/chatty-bwa)
+
 A new Flutter project.
 
 ## Getting Started
