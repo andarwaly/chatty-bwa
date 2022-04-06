@@ -1,4 +1,5 @@
-import 'dart:ffi';
+import 'package:chatty_bwa/routes/routes.dart';
+import 'package:get/get.dart';
 
 import 'package:flutter/material.dart';
 import 'package:chatty_bwa/theme.dart';
@@ -35,6 +36,14 @@ class chatHeader extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            IconButton(
+                onPressed: () {
+                  Get.toNamed(RoutesClasss.getHomeRoute());
+                },
+                icon: Icon(Icons.arrow_back_ios)),
+            SizedBox(
+              width: 16,
+            ),
             Image.asset(
               headerImg,
               height: 55,
@@ -209,5 +218,83 @@ class inputField extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class userBubble extends StatelessWidget {
+  const userBubble({
+    required this.userPic,
+    required this.textMsg,
+    required this.time,
+  });
+
+  final String userPic;
+  final String textMsg;
+  final String time;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        padding: const EdgeInsets.only(
+          bottom: 30,
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            ClipSmoothRect(
+              radius: const SmoothBorderRadius.only(
+                  topLeft: SmoothRadius(
+                    cornerRadius: 24,
+                    cornerSmoothing: 0.6,
+                  ),
+                  topRight: SmoothRadius(
+                    cornerRadius: 20,
+                    cornerSmoothing: 0.6,
+                  ),
+                  bottomLeft: SmoothRadius(
+                    cornerRadius: 24,
+                    cornerSmoothing: 0.6,
+                  )),
+              child: Container(
+                color: neutral0,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20.0,
+                  vertical: 11.0,
+                ),
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxWidth: 360,
+                  ),
+                  child: SizedBox(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          textMsg,
+                          style: bodyL,
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          time,
+                          style: bodyB,
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              width: 12,
+            ),
+            Image.asset(
+              userPic,
+              height: 40,
+              width: 40,
+            ),
+          ],
+        ));
   }
 }

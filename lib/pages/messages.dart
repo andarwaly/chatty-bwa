@@ -3,8 +3,8 @@ import 'package:chatty_bwa/theme.dart';
 import 'package:chatty_bwa/widgets/chatMessages.dart';
 import 'package:chatty_bwa/pages/homepage.dart';
 
-class chatPanel extends StatelessWidget {
-  const chatPanel({Key? key}) : super(key: key);
+class ChatPanel extends StatelessWidget {
+  const ChatPanel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,10 +35,15 @@ class chatPanel extends StatelessWidget {
               textMsg: 'Aman coyyyy ini Yoshi mokel makan putung rokok cobaa',
               time: '03:11',
             ),
+            userBubble(
+              userPic: 'assets/images/profile_pic.png',
+              textMsg: 'Aman coyyyy ini Yoshi mokel makan putung rokok cobaa',
+              time: '03:12',
+            ),
             friendBubble(
               userPic: 'assets/images/friends2.png',
               textMsg: 'Emang paling unik abang yoshi ini',
-              time: '03:11',
+              time: '03:13',
             ),
           ],
         ),

@@ -1,7 +1,9 @@
+import 'package:chatty_bwa/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:chatty_bwa/theme.dart';
 import 'package:chatty_bwa/widgets/chatlist.dart';
 import 'package:figma_squircle/figma_squircle.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -84,12 +86,17 @@ class HomePage extends StatelessWidget {
                         const SizedBox(
                           height: 4,
                         ),
-                        const chatReels(
-                          chatImg: 'assets/images/friends1.png',
-                          chatFrom: 'Joshuer',
-                          chatText: 'Sorry, you’re not my ty...',
-                          chatTime: 'Now',
-                          read: false,
+                        InkWell(
+                          onTap: () {
+                            Get.toNamed(RoutesClasss.getChatRoute());
+                          },
+                          child: const chatReels(
+                            chatImg: 'assets/images/friends1.png',
+                            chatFrom: 'Joshuer',
+                            chatText: 'Sorry, you’re not my ty...',
+                            chatTime: 'Now',
+                            read: false,
+                          ),
                         ),
                         const chatReels(
                           chatImg: 'assets/images/friends2.png',

@@ -8,12 +8,13 @@ class chatReels extends StatelessWidget {
   final String chatTime;
   final bool read;
 
-  const chatReels(
-      {required this.chatImg,
-      required this.chatFrom,
-      required this.chatText,
-      required this.chatTime,
-      required this.read});
+  const chatReels({
+    required this.chatImg,
+    required this.chatFrom,
+    required this.chatText,
+    required this.chatTime,
+    required this.read,
+  });
   @override
   Widget build(BuildContext context) {
     return Padding(

@@ -58,7 +58,7 @@ packages:
     source: hosted
     version: "1.2.0"
   figma_squircle:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: figma_squircle
       url: "https://pub.dartlang.org"
@@ -81,6 +81,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  get:
+    dependency: "direct main"
+    description:
+      name: get
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.6.1"
   lints:
     dependency: transitive
     description:
