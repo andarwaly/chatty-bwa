@@ -1,8 +1,8 @@
-# chatty_bwa
+# Chatty By Build With Angga Course
 
 [![wakatime](https://wakatime.com/badge/github/andarwaly/chatty-bwa.svg)](https://wakatime.com/badge/github/andarwaly/chatty-bwa)
 
-Kelas prakterk lanjutan setelah basic app design untuk latihan slicing dari figma ke flutter
+This is a part of follow along course on buildwithangga.com
 
 ## What I learned Here
 
